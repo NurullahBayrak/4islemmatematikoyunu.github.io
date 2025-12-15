@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>4 İşlem Matematik Oyunu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ANA MENÜ -->
+<div id="menu" class="screen active">
+  <h1>4 İşlem Oyunu</h1>
+
+  <select id="difficulty">
+    <option value="easy">Kolay</option>
+    <option value="medium">Orta</option>
+    <option value="hard">Zor</option>
+  </select>
+
+  <select id="operation">
+    <option value="all">Tüm İşlemler</option>
+    <option value="+">Toplama</option>
+    <option value="-">Çıkarma</option>
+    <option value="*">Çarpma</option>
+    <option value="/">Bölme</option>
+  </select>
+
+  <button onclick="startGame()">Oyuna Başla</button>
+
+  <p>En Yüksek Skor: <b id="bestScore">0</b></p>
+</div>
+
+<!-- OYUN EKRANI -->
+<div id="game" class="screen">
+  <div class="top-bar">
+    <span>⏱️ <b id="time">60</b></span>
+    <span>❤️ <b id="lives">3</b></span>
+    <span>⭐ <b id="score">0</b></span>
+  </div>
+
+  <div id="question" class="question">Soru</div>
+
+  <input type="number" id="answer" placeholder="Cevap">
+  <button onclick="checkAnswer()">Gönder</button>
+
+  <button class="exit" onclick="goMenu()">Menüye Dön</button>
+</div>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
